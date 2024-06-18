@@ -8,7 +8,7 @@
     xml:space="preserve"
   >
     <path
-      style="fill: #{{Color}}"
+      :style="`fill: #${colorShade}`"
       d="M511.672,391.952c0,0-97.531-128.574-180.463-211.49C248.278,97.531,119.705,0,119.705,0
 	s136.006,0.328,263.83,128.136C511.344,255.945,511.672,391.952,511.672,391.952z"
     />
@@ -21,7 +21,7 @@
       x="322.589"
       y="87.817"
       transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 494.1918 518.9033)"
-      style="fill: #{{Color}}"
+      :style="`fill: #${color}`"
       width="63.951"
       height="138.569"
     />
@@ -34,7 +34,25 @@
 </template>
 
 <script setup>
-  const props = defineProps({
-    color: String
-  })
+const props = defineProps({
+  color: String,
+  colorShade: String
+})
+
+const colorShade = toShade(props.color)
+
+function toShade(hex) {
+  let rgb = {
+    r: parseInt(hex.slice(0, 2), 16),
+    g: parseInt(hex.slice(2, 4), 16),
+    b: parseInt(hex.slice(4, 6), 16)
+  }
+  let rgbShade = {
+    r: Math.floor(rgb.r * 0.8).toString(16),
+    g: Math.floor(rgb.g * 0.8).toString(16),
+    b: Math.floor(rgb.b * 0.8).toString(16)
+  }
+  let res = rgbShade.r + rgbShade.g + rgbShade.b
+  return res
+}
 </script>

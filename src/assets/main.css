@@ -12,6 +12,13 @@
 
 body{
   background: var(--darker-cyan);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.infoField{
+ background: var(--cyan);
+color: black;
+  font-weight: bold;
 }
 
 #app {
