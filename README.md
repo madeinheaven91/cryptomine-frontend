@@ -1,14 +1,12 @@
 # tg-coin-frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+This is the greatest scam coin of all time
 
-## Recommended IDE Setup
+This web app should be used with a telegram bot.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## TODO
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- [ ] Implement all the necessary functionality
 
 ## Project Setup
 
