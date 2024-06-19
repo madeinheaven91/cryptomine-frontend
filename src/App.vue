@@ -1,39 +1,18 @@
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
 import Pickaxe from './components/icons/Pickaxe.vue'
-
-let diamonds = ref(0);
-let clickPower = 1;
-
-function pickaxeClick(){
-  diamonds.value += clickPower;
-}
-
+import Header from './components/Header.vue'
+import BottomPanel from './components/BottomPanel.vue'
 </script>
 
 <template>
-  <header class="flex">
-    <!-- avatar -->
-    <!-- nickname -->
-  </header>
-  <main class="flex flex-col gap-10">
-    <div class="flex gap-5 w-full">
-      <div class="flex flex-col gap-10 rounded-xl border w-1/3 items-center infoField">
-        <p>За тап</p>
-        <p>{{diamonds}}</p>
-      </div>
-      <div class="flex flex-col gap-10 rounded-xl border w-1/3 items-center infoField">
-        <p>До апа</p>
-        <p>1000</p>
-      </div>
-      <div class="flex flex-col gap-10 rounded-xl border w-1/3 items-center infoField">
-        <p>Автокликер</p>
-        <p>0</p>
-      </div>
-    </div>
-    <div class="text-6xl">Diamonds: {{diamonds}}</div>
-    <Pickaxe @click="pickaxeClick()" color="fff947"/>
-  </main>
+  <div id="body__wrapper" class="flex flex-col gap-20">
+    <Header />
+
+    <img id="block" src="/blocks/dirt.png" alt="" width="352px" height="352px" />
+
+    <BottomPanel />
+  </div>
 </template>
 
 <style scoped></style>
