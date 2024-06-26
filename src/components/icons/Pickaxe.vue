@@ -33,7 +33,7 @@
   </svg>
 </template>
 
-<script setup>
+<script setup lang='ts'>
 const props = defineProps({
   color: String,
   colorShade: String
@@ -41,7 +41,7 @@ const props = defineProps({
 
 const colorShade = toShade(props.color)
 
-function toShade(hex) {
+function toShade(hex: string) {
   let rgb = {
     r: parseInt(hex.slice(0, 2), 16),
     g: parseInt(hex.slice(2, 4), 16),

@@ -2,11 +2,12 @@
   <img :src="`${path}`" draggable="false" class="select-none cursor-pointer"/>
 </template>
 
-<script setup>
+
+<script setup lang='ts'>
   const props = defineProps({
     rank: String
   })
-let path = '/blocks/' + props.rank + '.jpg'
+let path:string = '/blocks/' + props.rank + '.jpg'
 
 /* ranks
   1) dirt

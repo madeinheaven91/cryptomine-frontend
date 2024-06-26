@@ -21,7 +21,7 @@
   </header>
 </template>
 
-<script setup>
+<script setup lang='ts'>
 import { NumToFormattedStr } from '../util.js'
 const props = defineProps({
   moneyTotal: Number,
