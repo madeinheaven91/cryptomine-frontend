@@ -1,5 +1,5 @@
 <template>
-  <header class="flex flex-col gap-5 items-center">
+  <header class="flex flex-col gap-5 items-center select-none">
     <div class='flex gap-3'>
       <img src="/icons/logo.png" width="32px">
       <span class="text-3xl font-bold">CryptoMine</span>

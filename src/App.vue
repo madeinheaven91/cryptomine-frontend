@@ -1,38 +1,20 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 import { onMounted, ref, reactive } from 'vue'
 import Pickaxe from './components/icons/Pickaxe.vue'
 import Header from './components/Header.vue'
 import Block from './components/Block.vue'
 import BottomPanel from './components/BottomPanel.vue'
-import axios from 'axios'
-
-const serverURL = 'http://localhost:3000' 
-let user: object;
-let moneyTotal = ref(0)
-let perClick = ref(1)
-let perSec = ref(0)
-
-function onBlockClick() {
-  moneyTotal.value += perClick.value
-}
-
-setInterval(() => {
-  moneyTotal.value += perSec.value
-}, 1000)
-
-const fetchUser = async () => {
-  let { data } = await axios.get(`${serverURL}/api/user/1`)
-  return data
-}
-
-onMounted(async () => {
-  user = reactive(fetchUser())
-})
+import currentUser from './api/fetchUser'
+import { onBlockClick } from './api/functions'
 </script>
 
 <template>
   <div id="body__wrapper" class="flex flex-col gap-12 justify-between items-center h-full">
-    <Header :moneyTotal="moneyTotal" :perClick="perClick" :perSec="perSec" />
+    <Header
+      :moneyTotal="currentUser.moneytotal"
+      :perClick="currentUser.perclick"
+      :perSec="currentUser.persecond"
+    />
     <Block rank="diamond" @click="onBlockClick()" />
     <BottomPanel />
   </div>
