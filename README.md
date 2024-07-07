@@ -2,11 +2,17 @@
 
 This is the greatest scam coin of all time
 
-This web app should be used with a telegram bot.
+This app should be used with:
+- backend (https://github.com/madeinheaven91/cryptomine-backend)
+- telegram bot (coming soon)
 
 ## TODO
 
-- [ ] Implement all the necessary functionality
+- [x] implement title screen and clicker functionality 
+- [x] link with backend
+- [ ] implement upgrade, friends and settings screens
+- [ ] implement upgrades
+- [ ] implement authentication via telegram bot
 
 ## Project Setup
 
