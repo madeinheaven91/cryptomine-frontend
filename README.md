@@ -6,6 +6,15 @@ This app should be used with:
 - backend (https://github.com/madeinheaven91/cryptomine-backend)
 - telegram bot (coming soon)
 
+## Stack
+
+- Vue.js
+- TypeScript
+- Vue router
+- Axios
+- Tailwind
+- PostCSS
+
 ## TODO
 
 - [x] implement title screen and clicker functionality 
