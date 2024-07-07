@@ -1,8 +1,10 @@
-export type User = {
-  id: number,
+type User = {
+  userId: number,
   username: string,
   link: string,
-  moneyTotal: string,
-  perClick: string,
-  perSecond: string,
-}
+  moneyTotal: number,
+  perClick: number,
+  perSecond: number,
+} 
+
+export default User;
